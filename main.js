@@ -1,11 +1,31 @@
-/*3. Dado el siguiente conjunto de elementos:*/
-const values = [true, false, 5, "hola", [1,2,3], {age: 2, gender: 'male'}];
-/*a. Escribe las instrucciones para mostrar por consola el tipo de cada uno de los
-elementos del conjunto. No es necesario mostrar su índice.*/ 
-for(let elemento of values){
-    if(typeof elemento === "object" && Array.isArray(elemento)){ //Typeof no diferencia los array, he puesto esta función añadida para diferenciarla del otro objeto
-        console.log("array");      
-    }else{
-        console.log(typeof elemento); //devuelve el tipo de objeto en el índice del array que está recorriendo en este momento
-    }
-};
+//4. Dado el siguiente snippet de código:
+var numero1 = 5;
+var numero2 = 8;
+/*if(...) {
+    console.log("numero1 no es mayor que numero2");
+}
+if(...) {
+    console.log("numero2 es positivo");
+}
+if(...) {
+    console.log("numero1 es negativo o distinto de cero");
+}
+if(...) {
+    console.log("Incrementar en 1 unidad el valor de numero 1 "+
+    "no lo hace mayor o igual que numero2");
+}*/
+
+//Haz que las afirmaciones en las cadenas de texto no digan ninguna mentira.
+if(!(numero1>=numero2)) {
+    console.log("numero1 no es mayor que numero2");
+}
+if(numero2>=0) {
+    console.log("numero2 es positivo");
+}
+if(numero1<0 || numero1!=0 ) {
+    console.log("numero1 es negativo o distinto de cero");
+}
+if(!(numero1+1>=numero2)) {
+    console.log("Incrementar en 1 unidad el valor de numero 1 "+
+    "no lo hace mayor o igual que numero2");
+}
