@@ -1,9 +1,11 @@
-//2. Crea un array de elementos que contenga el nombre de los 12 meses del año y…
-var mesesAny = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
-//a. Haz que se escriban por la consola del navegador en líneas consecutivas.
-for(let mes of mesesAny){
-    console.log(mes);
-}    
-//b. Haz que se escriban en la consola del navegador en formato de tabla
-console.table(mesesAny);
-
+/*3. Dado el siguiente conjunto de elementos:*/
+const values = [true, false, 5, "hola", [1,2,3], {age: 2, gender: 'male'}];
+/*a. Escribe las instrucciones para mostrar por consola el tipo de cada uno de los
+elementos del conjunto. No es necesario mostrar su índice.*/ 
+for(let elemento of values){
+    if(typeof elemento === "object" && Array.isArray(elemento)){ //Typeof no diferencia los array, he puesto esta función añadida para diferenciarla del otro objeto
+        console.log("array");      
+    }else{
+        console.log(typeof elemento); //devuelve el tipo de objeto en el índice del array que está recorriendo en este momento
+    }
+};
